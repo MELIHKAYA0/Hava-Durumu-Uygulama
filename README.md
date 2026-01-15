@@ -8,6 +8,11 @@ This project is a professional web application that provides global weather data
 
 ---
 
+## 🔗 Canlı Demo | Live Demo
+🚀 **[Uygulamayı Buradan Test Edin | Test the App Here](https://melihkaya0.github.io/Hava-Durumu-Uygulama/)**
+
+---
+
 ## 🚀 Özellikler | Features
 
 ### 🇹🇷 Türkçe
@@ -31,7 +36,6 @@ This project is a professional web application that provides global weather data
     * [Ionicons](https://ionicons.com/) (Icon Set)
 
 ---
-
 
 ## ✒️ Geliştirici | Developer
 Designed & Developed by **Melih**
