@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Hava İstasyonu | Melih</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="//unpkg.com/globe.gl"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="weather-effects"></div>
+    <div id="globe-container" style="display: none;"></div>
+    
+    <button id="closeGlobe" class="close-btn" style="display: none;">
+        <ion-icon name="close-outline"></ion-icon>
+    </button>
+
+    <div class="card" id="main-card">
+        <div class="card-header">
+            <h3>Hava İstasyonu</h3>
+            <button id="globeBtn" class="globe-main-btn" title="3D Dünya">
+                <ion-icon name="planet-outline"></ion-icon>
+            </button>
+        </div>
+
+        <div class="selection-area">
+            <div class="custom-select-wrapper" id="country-wrapper">
+                <div class="custom-select">
+                    <div class="select-trigger"><span>Ülke Seçiniz...</span> <ion-icon name="chevron-down-outline"></ion-icon></div>
+                    <div class="select-options">
+                        <input type="text" class="select-search" placeholder="Ülke ara...">
+                        <div class="options-list"></div>
+                    </div>
+                </div>
+                <input type="hidden" id="selectedCountryCode">
+            </div>
+
+            <div class="custom-select-wrapper disabled" id="city-wrapper">
+                 <div class="custom-select">
+                    <div class="select-trigger"><span>Şehir Seçiniz...</span> <ion-icon name="chevron-down-outline"></ion-icon></div>
+                    <div class="select-options">
+                         <input type="text" class="select-search" placeholder="Şehir ara...">
+                        <div class="options-list"></div>
+                    </div>
+                </div>
+                <input type="hidden" id="selectedCityName">
+            </div>
+
+            <button id="searchBtn"><ion-icon name="search"></ion-icon> Analiz Et</button>
+        </div>
+
+        <div class="weather-info">
+            <div class="main-temp-group">
+                <img id="weather-icon" src="" alt="" style="display: none;">
+                <h1 id="temp">--</h1><span class="unit">°C</span>
+            </div>
+            <h2 id="city">Konum Seçin</h2>
+            <p id="description">Analiz Bekleniyor...</p>
+
+            <div class="details-grid">
+                <div class="detail-item">
+                    <ion-icon name="water-outline"></ion-icon>
+                    <div><span>Nem</span><p id="humidity">--%</p></div>
+                </div>
+                <div class="detail-item">
+                    <ion-icon name="speedometer-outline"></ion-icon>
+                    <div><span>Rüzgar</span><p id="wind">-- km/s</p></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-signature">
+            <p>Designed by <span>Melih</span></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
